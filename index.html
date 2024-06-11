@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+      <!-- Roboto font -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./src/output.css"> <!-- CSS file -->
+    <style>
+        #animated-navbar {
+          transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+      </style>
+</head>
+
+<body>
+    <header class="mb-28">
+          <!-- Navbar -->
+        <nav
+        id="animated-navbar"
+        class="mobile-only:bg-white flex-no-wrap fixed top-0 z-10 flex w-full items-center justify-between py-2 dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:py-4">
+        <div class="flex w-full flex-wrap items-center justify-between px-3">
+            <!-- Hamburger button for mobile view -->
+            <button
+            class="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+            type="button"
+            data-twe-collapse-init
+            data-twe-target="#navbarSupportedContent1"
+            aria-controls="navbarSupportedContent1"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <!-- Hamburger icon -->
+            <span class="[&>svg]:w-7">
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="h-7 w-7">
+                <path
+                    fill-rule="evenodd"
+                    d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                    clip-rule="evenodd" />
+                </svg>
+            </span>
+            </button>
+
+            <!-- Collapsible navigation container -->
+            <div
+            class="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
+            id="navbarSupportedContent1"
+            data-twe-collapse-item>
+            <!-- Logo -->
+            <a
+                class="mb-4 me-5 ms-2 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
+                href="#">
+                <img
+                src="../images/logo.png"
+                style="height: 25px"
+                alt="Logo"
+                loading="lazy" />
+            </a>
+            <!-- Left navigation links -->
+            <ul
+                class="list-style-none me-auto flex flex-col ps-0 lg:flex-row"
+                data-twe-navbar-nav-ref>
+                <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+                <!-- Dashboard link -->
+                <a  id="projectslink"
+                    class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400"
+                    href="#projects"
+                    data-twe-nav-link-ref
+                    >Projects</a
+                >
+                </li>
+                <!-- Team link -->
+                <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+                <a
+                    class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                    href="#about_me"
+                    data-twe-nav-link-ref
+                    >About Me</a
+                >
+                </li>
+                <!-- Projects link -->
+                <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+                <a
+                    class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                    href="#contact"
+                    data-twe-nav-link-ref
+                    >Contact</a
+                >
+                </li>
+            </ul>
+            </div>
+
+            <!-- Right elements -->
+            <div id="navbar-icons" class="mobile-only:py-2 relative flex items-center">
+
+                <a
+                href="https://www.linkedin.com/in/alec-scott-499670280/"
+                type="button"
+                class="mobile-only:text-neutral-500 me-4 text-white transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+               data-twe-ripple-init>
+                <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 448 512">
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                    <path
+                        d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+                    </svg>
+                </span>
+                </a>
+    
+                <a
+                href="https://www.github.com/asjscott"
+                type="button"
+                class="mobile-only:text-neutral-500 me-4 text-white transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                data-twe-ripple-init>
+                <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 496 512">
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                    <path
+                        d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                    </svg>
+                </span>
+                </a>
+            </div>
+        </div>
+        </nav>
+        <!-- Navbar -->
+          <!-- Section: Split screen -->
+  <section class="">
+    <!-- Grid -->
+    <div class="grid h-screen grid-cols-1 lg:grid-cols-2">
+      <!-- First column -->
+      <div class="hidden lg:block">
+        <!-- Outer wrapper for flexbox-->
+        <div class="flex flex-col h-full items-center justify-center">
+          <!-- Inner flexbox wrapper for headings -->
+        <div class="flex h-full items-center">
+            <!-- Headings -->
+            <div class="text-gray-600">
+            <h1 class="mb-5 text-6xl font-light">Alec Scott</h1>
+            <h2 class="mb-7 text-6xl font-bold uppercase">Developer</h2>
+            <h2 class="mb-7 text-6xl font-bold uppercase">Data Scientist</h2>
+            <h2 class="mb-7 text-6xl font-bold uppercase">Teacher</h2>
+            </div>
+        </div>
+        <!-- Inner flexbox wrapper for CTA elements -->
+        <div class="flex w-full items-center justify-between px-10 pb-8">
+            <a href="" target="_blank">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                viewBox="0 0 496 512">
+                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+            </svg>
+            </a>
+        
+            <div class="h-[2px] w-[200px] bg-gray-200"></div>
+        
+            <a
+            role="button"
+            href="#projects"
+            data-twe-ripple-init
+            data-twe-ripple-color="light"
+            class="inline-block rounded-full bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+            See my projects
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="ms-1 inline h-5 w-5">
+                <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+            </a>
+        </div>
+      </div>
+      </div>
+      <!-- Outer wrapper for flexbox-->
+      <!-- First column -->
+
+        <!-- Second column -->
+        <div class="">
+            <!-- Carousel -->
+            <div
+            id="carouselExampleCaptions"
+            class="relative"
+            data-twe-carousel-init
+            data-twe-ride="carousel">
+            <!--Carousel indicators-->
+            <div
+                class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
+                data-twe-carousel-indicators>
+                <button
+                type="button"
+                data-twe-target="#carouselExampleCaptions"
+                data-twe-slide-to="0"
+                data-twe-carousel-active
+                class="mx-[3px] box-content h-2 w-2 flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                aria-current="true"
+                aria-label="Slide 1"></button>
+                <button
+                type="button"
+                data-twe-target="#carouselExampleCaptions"
+                data-twe-slide-to="1"
+                class="mx-[3px] box-content h-2 w-2 flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                aria-label="Slide 2"></button>
+                <button
+                type="button"
+                data-twe-target="#carouselExampleCaptions"
+                data-twe-slide-to="2"
+                class="mx-[3px] box-content h-2 w-2 flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                aria-label="Slide 3"></button>
+            </div>
+
+            <!--Carousel items-->
+            <div
+                class="relative w-full overflow-hidden shadow-2xl rounded-bl-[4rem] after:clear-both after:block after:content-['']">
+                <!--First item-->
+                <div
+                class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                data-twe-carousel-active
+                data-twe-carousel-item
+                style="backface-visibility: hidden">
+                <img
+                    src="./src/images/pythonpic.jpg"
+                    class="block h-screen w-full object-cover object-center"
+                    alt="..." />
+                <div
+                    class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+                    <h5 class="text-xl">Developer in Python</h5>
+                    <p>
+                    Proficient in programming in python amongst other languages
+                    </p>
+                </div>
+                </div>
+                <!--Second item-->
+                <div
+                class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                data-twe-carousel-item
+                style="backface-visibility: hidden">
+                <img
+                    src="./src/images/DScertification.jpg"
+                    class="block h-screen w-full object-cover object-center"
+                    alt="..." />
+                <div
+                    class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-black md:block">
+                    <h5 class="text-xl">Certified Data Scientist</h5>
+                    <p>
+                    Certified in data science from DataCamp.
+                    </p>
+                </div>
+                </div>
+                <!--Third item-->
+                <div
+                class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                data-twe-carousel-item
+                style="backface-visibility: hidden">
+                <img
+                    src="./src/images/mathpic.jpeg"
+                    class="block h-screen w-full object-cover object-left"
+                    alt="..." />
+                <div
+                    class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+                    <h5 class="text-xl">Teacher of Math</h5>
+                    <p>
+                    Over 10 years of teaching experience in Secondary Mathematics. 
+                    </p>
+                </div>
+                </div>
+            </div>
+
+            <!--Carousel controls - prev item-->
+            <button
+                class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+                type="button"
+                data-twe-target="#carouselExampleCaptions"
+                data-twe-slide="prev">
+                <span class="inline-block h-8 w-8">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6">
+                    <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+                </span>
+                <span
+                class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+                >Previous</span
+                >
+            </button>
+            <!--Carousel controls - next item-->
+            <button
+                class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+                type="button"
+                data-twe-target="#carouselExampleCaptions"
+                data-twe-slide="next">
+                <span class="inline-block h-8 w-8">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6">
+                    <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+                </span>
+                <span
+                class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+                >Next</span
+                >
+            </button>
+            </div>
+            <!-- Carousel -->
+        </div>
+        <!-- Second column -->
+    </div>
+    <!-- Grid -->
+  </section>
+  <!-- Section: Split screen -->
+    </header>
+   
+    <main>
+        <div class="container mx-auto lg:px-32">
+            <!-- Section: My projects -->
+            <section class="mb-28 text-center" id="projects">
+                <h2 class="mb-12 text-center text-3xl font-bold">My projects</h2>
+            
+                <!-- Grid -->
+                <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 xl:gap-12">
+                    <!-- First column -->
+                    <div>
+                    <!-- Card -->
+                    <div
+                        class="inline-block h-full rounded-xl bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+                        <div
+                        class="mx-4 -mt-4 relative overflow-hidden bg-cover bg-no-repeat shadow-lg"
+                        data-twe-ripple-init
+                        data-twe-ripple-color="light">
+                        <img
+                            class="w-full rounded-xl"
+                            src="./src/images/football.jpg"
+                            alt="" />
+                        <a href="#!">
+                            <div
+                            class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+                        </a>
+                        </div>
+                        <div class="p-6">
+                        <h5
+                            class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+                            Football Score Predictor
+                        </h5>
+                        <p class="mb-4 text-gray-500 dark:text-neutral-400">
+                            <small
+                            >Ongoing <u></u>
+                            </small
+                            >
+                        </p>
+                        <p class="mb-5 text-base text-neutral-500 dark:text-neutral-200">
+                            Using scraped data from five thirty eight and using the details outlined 
+                            in five thiry eight blog posts I am attempting to recreate some of the 
+                            genius football score predictions that they have infamously produced.
+                        </p>
+                        <button
+                            type="button"
+                            data-twe-ripple-init
+                            data-twe-ripple-color="primary"
+                            class="inline-block rounded-full bg-primary-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out hover:bg-primary-accent-100 focus:bg-primary-accent-100 focus:outline-none focus:ring-0 active:bg-primary-accent-200">
+                            Look at the code
+                        </button>
+                        </div>
+                    </div>
+                    <!-- Card -->
+                    </div>
+                    <!-- First column -->
+                
+                    <!-- Second column -->
+                    <div>
+                    <!-- Card -->
+                    <div
+                        class="inline-block h-full rounded-xl bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+                        <div
+                        class="relative mx-4 -mt-4 overflow-hidden bg-cover bg-no-repeat shadow-lg"
+                        data-twe-ripple-init
+                        data-twe-ripple-color="light">
+                        <img
+                            class="w-full rounded-xl"
+                            src="./src/images/react.jpg"
+                            alt="" />
+                        <a href="#!">
+                            <div
+                            class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+                        </a>
+                        </div>
+                        <div class="p-6">
+                        <h5
+                            class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+                            React projects
+                        </h5>
+                        <p class="mb-4 text-gray-500 dark:text-neutral-400">
+                            <small
+                            >Finished <u>12.03.2024</u>
+                            </small
+                            >
+                        </p>
+                        <p class="mb-5 text-base text-neutral-500 dark:text-neutral-200">
+                            A collection of various React components which I learned to build 
+                            to enhance my understanding of front end web development. Some examples 
+                            include a calculator app, a pomodoro timer and a dark mode switch.
+                        </p>
+                
+                        <button
+                            type="button"
+                            data-twe-ripple-init
+                            data-twe-ripple-color="primary"
+                            class="inline-block rounded-full bg-primary-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out hover:bg-primary-accent-100 focus:bg-primary-accent-100 focus:outline-none focus:ring-0 active:bg-primary-accent-200">
+                            Look at the code 
+                        </button>
+                        </div>
+                    </div>
+                    <!-- Card -->
+                    </div>
+                    <!-- Second column -->
+                
+                    <!-- Third column -->
+                    <div>
+                    <!-- Card -->
+                    <div
+                        class="inline-block h-full rounded-xl bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+                        <div
+                        class="relative mx-4 -mt-4 overflow-hidden bg-cover bg-no-repeat shadow-lg"
+                        data-twe-ripple-init
+                        data-twe-ripple-color="light">
+                        <img
+                            class="w-full rounded-xl"
+                            src="./src/images/tradingbot.jpg"
+                            alt="" />
+                        <a href="#!">
+                            <div
+                            class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+                        </a>
+                        </div>
+                        <div class="p-6">
+                        <h5
+                            class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+                            Trading bot
+                        </h5>
+                        <p class="mb-4 text-gray-500 dark:text-neutral-400">
+                            <small
+                            >Finished <u>17.08.2023</u></small
+                            >
+                        </p>
+                        <p class="mb-5 text-base text-neutral-500 dark:text-neutral-200">
+                            Using python as the base language I made use of APIs to gather current 
+                            stock market data. After carrying out analysis of the data the program 
+                            looks at key stock market indicators and makes a judgement on whether 
+                            to buy or sell. 
+                        </p>
+                
+                        <button
+                            type="button"
+                            data-twe-ripple-init
+                            data-twe-ripple-color="primary"
+                            class="inline-block rounded-full bg-primary-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out hover:bg-primary-accent-100 focus:bg-primary-accent-100 focus:outline-none focus:ring-0 active:bg-primary-accent-200">
+                            Look at the code
+                        </button>
+                        </div>
+                    </div>
+                    <!-- Card -->
+                    </div>
+                    <!-- Third column -->
+                </div>
+                <!-- Grid -->
+            </section>
+            <!-- Section: My projects -->
+          </div>
+          <section class="mb-10" id="about_me">
+
+            <div class="container mx-auto">
+    
+              <div class="grid grid-cols-1 lg:grid-cols-2 mx-auto px-10 gx-0 items-center">
+    
+                <!-- Firt column -->
+                <div class="col-lg-6 mb-5 mb-lg-0">
+    
+                  <div style="background: rgba(255, 255, 255, 0.55); backdrop-filter: blur(30px); z-index: 1; visibility: visible;" 
+                        class="relative flex flex-col box-border shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] rounded-2xl lg:-me-[3rem] animation fade-in"
+                        data-twe-animation-init
+                        data-twe-animation-reset="true"
+                        data-twe-animation-start="onHover" 
+                        data-twe-animation="[slide-right_1s_ease-in-out]">
+                    <div class="card-body lg:p-[3rem] p-[1.5rem] shadow-5">
+                      <h2 class="font-extrabold text-2xl mb-[.5rem]">
+                        <span class="text-primary">Alec Scott</span>
+                      </h2>
+                      <p class="font-bold mb-[1rem]"><em>“Learning is a continual pursuit.”</em></p>
+    
+                      <p class="mb-5 text-base text-neutral-500 dark:text-neutral-200">
+                        Passionate about continuous learning and growth, I embarked on an enriching 
+                        journey upon relocating to Canada in 2022. While primarily focused on managing 
+                        household responsibilities as a homemaker to two wonderful children and supporting 
+                        my wife's professional endeavors, I seized the opportunity to dive into the world 
+                        of coding and data science. Through dedicated self-study and completion of esteemed 
+                        courses such as Harvard CS50 and DataCamp's Data Science certification, I honed 
+                        my skills in Python, JavaScript, and C programming languages.
+                      </p>
+                      <p class="mb-5 text-base text-neutral-500 dark:text-neutral-200">
+                        Prior to this, I dedicated a decade to shaping young minds as a mathematics teacher 
+                        from 2012 to 2022. This experience instilled in me a deep appreciation for problem-solving 
+                        and analytical thinking, skills that I've seamlessly translated into my coding and data 
+                        science pursuits.
+                        </p>
+                        <p class="mb-5 text-base text-neutral-500 dark:text-neutral-200">
+                        Now equipped with a solid foundation in computer science and data analysis, I am eager 
+                        to contribute my expertise and enthusiasm to impactful projects and collaborative 
+                        teams in the dynamic field of technology.
+                        </p>
+                    
+                    </div>
+                  </div>
+    
+                </div>
+                <!-- Firt column -->
+    
+                <!-- Second column -->
+                <div class="col-lg-6 mb-5 mb-lg-0">
+    
+                  <div class="relative overflow-hidden hover-overlay shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] animation fade-in rounded-2xl lg:rotate-6"
+                        data-mdb-toggle="animation" 
+                        data-mdb-animation-start="onScroll" 
+                        data-mdb-animation="fade-in" 
+                        data-mdb-animation-show-on-load="false" 
+                        data-mdb-animation-delay="200" 
+                        data-mdb-animation-offset="300" style="visibility: visible; animation-delay: 200ms; animation-duration: 500ms;">
+                    <img src="./src/images/profile3.JPG" class="w-100" alt="">
+                    <div class="mask" style="background: linear-gradient(
+                        45deg,
+                      hsla(169, 84.5%, 52%, 0.3),
+                      hsla(263, 87.7%, 44.7%, 0.3) 100%
+                                )">
+                    </div>
+                  </div>
+    
+                </div>
+                <!-- Second column -->
+    
+              </div>
+    
+            </div>
+    
+          </section>
+          <!-- Contact -->
+          <section class="mb-10 text-center" id="contact">
+
+            <div class="container mx-auto">
+    
+                <div class="grid grid-cols-1 lg:grid-cols-2 mx-auto px-10 gx-0 items-center">
+    
+                <!-- Firt column -->
+                <div style="background: rgba(255, 255, 255, 0.55); backdrop-filter: blur(30px); z-index: 1; visibility: visible;" 
+                    class="lg:p-[3rem] lg:-me-[3rem] mb-5 z-10 rounded-lg bg-white p-6 shadow-4 dark:bg-surface-dark">
+                   <div
+                        class="flex flex-col rounded-lg bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white md:max-w-xl md:flex-row">
+                        <img
+                            class="h-96 w-full rounded-t-lg object-cover md:h-auto md:w-48 md:!rounded-none md:!rounded-s-lg"
+                            src="./src/images/profile1.JPG"
+                            alt="" />
+                        <div class="flex flex-col justify-start p-6 text-left">
+                            <h5 class="mb-2 text-xl font-medium">Contact Me</h5>
+                            <p class="mb-4 text-base">Alec Scott</p>
+                            <p class="mb-4 text-base">asjscott@gmail.com</p>
+                            <p class="mb-4 text-base">+1(236)-990-1856</p>
+                            <p class="mb-4 text-base">North Vancouver, BC</p>
+                        </div>
+                        </div>
+                    </div>
+                <!-- Firt column -->
+    
+                <!-- Second column -->
+                <div class="col-lg-6 mb-5 mb-lg-0">
+    
+                  <div class="relative w-full rounded-xl aspect-square animation fade-in" data-mdb-toggle="animation" data-mdb-animation-start="onScroll" data-mdb-animation="fade-in" data-mdb-animation-show-on-load="false" data-mdb-animation-delay="200" data-mdb-animation-offset="200" style="visibility: visible; animation-delay: 200ms; animation-duration: 500ms;">
+                  <div class="h-full" style="overflow:hidden;resize:none;max-width:100%;">
+                    <div id="display-google-map" style="height:100%; width:100%;max-width:100%;">
+                        <iframe class="w-full h-full shadow-4 rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83327.56064043718!2d-123.20630370293911!3d49.25770615088066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673f143a94fb3%3A0xbb9196ea9b81f38b!2sVancouver%2C%20BC!5e0!3m2!1sen!2sca!4v1717991623608!5m2!1sen!2sca"></iframe></div>
+                    </div>
+    
+                </div>
+                <!-- Second column -->
+    
+              </div>
+    
+            </div>
+    
+          </section>
+    </main>
+    
+    <footer>
+        <!--Footer container-->
+        <footer
+        class="flex flex-col items-center bg-zinc-50 text-center text-surface dark:bg-neutral-700 dark:text-white">
+        <div class="container pt-9">
+        <!-- Social media icons container -->
+        <div class="mb-6 flex justify-center space-x-2">
+
+            <a
+            href="https://www.linked.com/in/alec-scott-499670280/"
+            type="button"
+            class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
+            data-twe-ripple-init>
+            <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 448 512">
+                <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                <path
+                    d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+                </svg>
+            </span>
+            </a>
+
+            <a
+            href="https://www.github.com/asjscott"
+            type="button"
+            class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
+            data-twe-ripple-init>
+            <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 496 512">
+                <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                <path
+                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                </svg>
+            </span>
+            </a>
+        </div>
+        </div>
+
+        <!--Copyright section-->
+        <div class="w-full bg-black/5 p-4 text-center">
+        © 2023 Copyright:
+        <a href="https://tw-elements.com/">TW Elements</a>
+        </div>
+        </footer>
+    <script
+  type="text/javascript"
+  src="./src/tw-elements.umd.min.js"></script>
+    <!-- Link to your JavaScript file -->
+    <script src="./src/script.js"></script>
+</body>
+</html>
