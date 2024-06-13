@@ -1047,6 +1047,10 @@ input[type="range"]:active::-webkit-slider-thumb {
   max-width: calc(100% - 1rem);
 }
 
+.max-w-screen-sm {
+    max-width: 640px;
+  }
+
 .max-w-full {
   max-width: 100%;
 }
